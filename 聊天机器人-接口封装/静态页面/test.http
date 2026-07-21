@@ -1,0 +1,7 @@
+POST https://study.duyiedu.com/api/user/login 
+Content-Type: application/json
+
+{
+    "loginId":"189",
+    "loginPwd":"123456"
+}
