@@ -1,5 +1,5 @@
 var API = (function(){
-    const BASE_URL = 'https://study.duyiedu.com';
+const BASE_URL = 'https://study.duyiedu.com';
 const TOKEN_KEY = 'token';
 const token = localStorage.getItem(TOKEN_KEY);
 
