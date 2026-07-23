@@ -36,30 +36,8 @@ class FieldValidator {
      * @param {FieldValidator[]} validators
      */
     static async validate(...validators){
-        const proms = validators.map(v => v.validate());
+        const proms = validators.map((v) => v.validate());
         const result =await Promise.all(proms);
         return result.every(r => r)
     }
-}
-
-//针对账号的验证器
-const loginIdValidator = new FieldValidator('txtLoginId',async function(val){
-    if(!val){
-        return '请填写账号!';
-    }
-    const res = await API.exists(val);
-    if(res.data){
-        return '账号已存在!';
-    }
-})
-
-//针对昵称的验证器
-const nicknameValidator = new FieldValidator('txtNickname',async function(val){
-    if(!val){
-        return '请填写昵称!';
-    }
-})
-
-function test(){
-    FieldValidator.validate(loginIdValidator,nicknameValidator).then(result => console.log(result))
 }

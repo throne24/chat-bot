@@ -6,7 +6,10 @@ const token = localStorage.getItem(TOKEN_KEY);
 function get(path){
     const headers = {};
     token;
-    return fetch(BASE_URL+path,headers,{headers})
+    if(token){
+        headers.authorization = `Bearer ${token}`;
+    }
+    return fetch(BASE_URL+path,{headers})
 }
 
 function post(path,bodyObj){
@@ -18,14 +21,14 @@ function post(path,bodyObj){
         headers.authorization = `Bearer ${token}`;
     }
     return fetch(BASE_URL+path,{
-        method:'POST',
         headers,
+        method:'POST',
         body:JSON.stringify(bodyObj)})
 }
 
 //注册接口函数
 async function reg(userinfo){
-    const resp = await post('api/user/reg',userinfo);
+    const resp = await post('/api/user/reg',userinfo);
     return await resp.json();
 }
 
