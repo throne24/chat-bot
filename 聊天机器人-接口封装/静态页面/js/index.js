@@ -105,6 +105,7 @@ const doms = {
       createdAt: Date.now(),
       content,
     });
+    scrollBottom();
     doms.txtMsg.value = '';
     const resp = await API.sendChat(content);
     ///将服务器返回的消息添加到页面中
