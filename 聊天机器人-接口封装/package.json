@@ -1,0 +1,18 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "common":"lessc less/common.less 静态页面/css/common.css",
+    "index":"lessc less/index.less 静态页面/css/index.css",
+    "user":"lessc less/user.less 静态页面/css/user.css"
+  },
+  "devDependencies": {
+    "less": "^4.8.0"
+  }
+}

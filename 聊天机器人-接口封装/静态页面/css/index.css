@@ -1,7 +1,6 @@
 body {
-  background: url(../asset/bg2.jpg) no-repeat center/100% 100%;
+  background: url(../asset/bg2.jpg) no-repeat center / 100% 100%;
 }
-
 .container {
   width: 870px;
   height: 600px;
@@ -9,10 +8,9 @@ body {
   display: flex;
   position: relative;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-
   color: #333;
 }
-.close {
+.container .close {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -27,51 +25,17 @@ body {
   cursor: pointer;
   transition: 0.2s;
 }
-.close:hover {
+.container .close:hover {
   background: #ccc;
   color: #888;
 }
-
-.main {
+.container .main {
   width: 600px;
   flex: 0 0 auto;
-}
-.aside {
-  flex: 1 0 auto;
-  padding-top: 80px;
-  border-left: 1px solid #eee;
-}
-.aside-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  float: left;
-  margin-left: 20px;
-  margin-right: 10px;
-}
-.aside-name {
-  font-weight: bold;
-  margin-top: 18px;
-  font-size: 20px;
-  width: 128px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.aside-account {
-  color: #ccc;
-  margin-top: 5px;
-  width: 128px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.main {
   display: flex;
   flex-direction: column;
 }
-.main-title {
+.container .main .main-title {
   height: 50px;
   line-height: 50px;
   display: flex;
@@ -81,57 +45,54 @@ body {
   flex: 0 0 auto;
   padding-left: 20px;
 }
-.main-title img {
+.container .main .main-title img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
 }
-
-.chat-container {
+.container .main .chat-container {
   height: 430px;
   overflow: hidden scroll;
   padding: 20px;
   background: #f5f5f5;
   scroll-behavior: smooth;
 }
-.chat-container::-webkit-scrollbar {
+.container .main .chat-container::-webkit-scrollbar {
   width: 5px;
   height: 13px;
 }
-.chat-container::-webkit-scrollbar-thumb {
+.container .main .chat-container::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   border-radius: 5px;
 }
-
-.chat-item {
+.container .main .chat-container .chat-item {
   padding-bottom: 25px;
   display: flex;
   position: relative;
   width: 100%;
   margin-bottom: 10px;
 }
-.chat-avatar {
+.container .main .chat-container .chat-item .chat-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
   flex: 0 0 auto;
 }
-.chat-content {
+.container .main .chat-container .chat-item .chat-content {
   font-size: 14px;
   border: 1px solid #d8d8d8;
   padding: 8px;
   background-color: #fff;
-  border: 1px solid #d8d8d8;
   border-radius: 6px;
   position: relative;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.1));
   line-height: 1.5;
   max-width: 450px;
 }
-.chat-content::after {
+.container .main .chat-container .chat-item .chat-content::after {
   content: '';
   background: inherit;
   position: absolute;
@@ -144,25 +105,25 @@ body {
   border-right-color: transparent;
   border-top-color: transparent;
 }
-.chat-date {
+.container .main .chat-container .chat-item .chat-date {
   position: absolute;
   color: #ccc;
   font-size: 12px;
   left: 50px;
   bottom: 5px;
 }
-.chat-item.me {
+.container .main .chat-container .chat-item.me {
   flex-direction: row-reverse;
 }
-.chat-item.me .chat-avatar {
+.container .main .chat-container .chat-item.me .chat-avatar {
   margin-right: 0;
   margin-left: 10px;
 }
-.chat-item.me .chat-content {
+.container .main .chat-container .chat-item.me .chat-content {
   background: #98e855;
   border-color: #88cf4d;
 }
-.chat-item.me .chat-content::after {
+.container .main .chat-container .chat-item.me .chat-content::after {
   left: auto;
   right: -6px;
   border-left-color: transparent;
@@ -170,11 +131,11 @@ body {
   border-right-color: inherit;
   border-top-color: inherit;
 }
-.chat-item.me .chat-date {
+.container .main .chat-container .chat-item.me .chat-date {
   left: auto;
   right: 50px;
 }
-.msg-container {
+.container .main .msg-container {
   display: flex;
   justify-content: flex-end;
   align-items: end;
@@ -184,7 +145,7 @@ body {
   position: relative;
   border-top: 1px solid #eee;
 }
-.msg-container input {
+.container .main .msg-container input {
   position: absolute;
   border: none;
   outline: none;
@@ -195,7 +156,7 @@ body {
   font-size: 16px;
   color: #333;
 }
-.msg-container button {
+.container .main .msg-container button {
   background-color: #59b573;
   width: 68px;
   line-height: 32px;
@@ -205,13 +166,41 @@ body {
   cursor: pointer;
   border: none;
   outline: none;
-  cursor: pointer;
   margin-left: 10px;
 }
-.msg-container button:hover {
+.container .main .msg-container button:hover {
   background-color: #66c982;
 }
-.msg-container button:active {
+.container .main .msg-container button:active {
   background-color: #458e5a;
 }
-
+.container .aside {
+  flex: 1 0 auto;
+  padding-top: 80px;
+  border-left: 1px solid #eee;
+}
+.container .aside .aside-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.container .aside .aside-name {
+  font-weight: bold;
+  margin-top: 18px;
+  font-size: 20px;
+  width: 128px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.container .aside .aside-account {
+  color: #ccc;
+  margin-top: 5px;
+  width: 128px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

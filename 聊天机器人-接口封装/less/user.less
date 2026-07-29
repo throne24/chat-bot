@@ -1,0 +1,104 @@
+// 主题变量
+@color-white: #fff;
+@color-gray: #ccc;
+@color-error: #ff8e03;
+@color-btn-primary: #ffda43;
+@color-btn-hover: #ffe57b;
+@color-btn-active: #d4b534;
+@radius-sm: 15px;
+@radius-lg: 25px;
+
+body {
+  background: url(../asset/bg1.png) no-repeat center;
+}
+
+.user-form {
+  border-radius: @radius-sm;
+  padding: 30px 80px;
+  font-size: 14px;
+  color: @color-white;
+  letter-spacing: 3px;
+  background: rgba(0, 0, 0, 0.2);
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.title {
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+
+  img {
+    height: 50px;
+    margin-right: 20px;
+  }
+}
+
+.form-group {
+  height: 80px;
+  padding-bottom: 30px;
+  position: relative;
+
+  .txt {
+    width: 100%;
+    height: 100%;
+    border: 1px solid @color-white;
+    background: transparent;
+    color: @color-white;
+    font-size: 16px;
+    letter-spacing: 3px;
+    outline: none;
+    border-radius: @radius-lg;
+    padding-right: 20px;
+    padding-left: 55px;
+
+    &::placeholder {
+      color: @color-gray;
+    }
+  }
+
+  .iconfont {
+    position: absolute;
+    left: 20px;
+    font-size: 24px;
+    color: @color-gray;
+    top: 13px;
+  }
+
+  .err {
+    position: absolute;
+    left: 20px;
+    bottom: 8px;
+    color: @color-error;
+  }
+
+  .submit {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    letter-spacing: 10px;
+    border-radius: @radius-lg;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.7);
+    background: @color-btn-primary;
+    transition: 0.2s;
+
+    &:hover {
+      background: @color-btn-hover;
+    }
+
+    &:active {
+      background: @color-btn-active;
+    }
+  }
+
+  .msg {
+    text-align: center;
+  }
+}

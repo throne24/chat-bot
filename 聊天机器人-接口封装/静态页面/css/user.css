@@ -1,7 +1,6 @@
 body {
   background: url(../asset/bg1.png) no-repeat center;
 }
-
 .user-form {
   border-radius: 15px;
   padding: 30px 80px;
@@ -13,7 +12,6 @@ body {
 .user-form a {
   text-decoration: underline;
 }
-
 .title {
   font-size: 50px;
   display: flex;
@@ -25,7 +23,6 @@ body {
   height: 50px;
   margin-right: 20px;
 }
-
 .form-group {
   height: 80px;
   padding-bottom: 30px;
@@ -82,4 +79,3 @@ body {
 .form-group .msg {
   text-align: center;
 }
-
